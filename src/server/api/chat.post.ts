@@ -4,7 +4,7 @@ import serverConfig from '@/config/serverConfig'
 
 export default defineEventHandler(async event => {
   const controller = new AbortController()
-  const timeoutId = setTimeout(() => controller.abort(), 60000)
+  const timeoutId = setTimeout(() => controller.abort(), 600000)
 
   try {
     const body = await readBody(event)
