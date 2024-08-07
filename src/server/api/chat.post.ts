@@ -14,11 +14,12 @@ export default defineEventHandler(async event => {
 
     const baseUrl = serverConfig.baseUrl
     const apiKey = serverConfig.apiKey
+    const model = serverConfig.model
 
     const url = `${baseUrl}/v1/chat/completions`
 
     const reqBodyJson = {
-      model: 'gpt-3.5-turbo',
+      model,
       stream,
       messages: [
         {
