@@ -8,6 +8,7 @@ COPY package-lock.json .
 COPY package.json .
 COPY tsconfig.json .
 
+RUN npm config set registry https://registry.npmmirror.com/
 RUN npm install
 RUN npm run build
 
